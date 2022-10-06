@@ -47,9 +47,22 @@ public class Main {
         for (int year = 1; year<=12; year ++){ zp1= zp1 + zp1/100; zp1=year*zp1;
         System.out.println("Месяц " + year + " , сумма накоплений равна "+zp1+" рублей");}
 
+//dopka
+        OUTER: for (int e=0; e<6; e++) {
+            INNER:
+            for (int c = 0; c < 60; c++) {
+                if (e > 1 && c % 10 == 0) {
+                    break OUTER;
+                }
 
-
-
+                MIDDLE:
+                for (int s = 0; s <60; s++) {if (s*e>c) {continue INNER;}
+                    System.out.println(e + ":" + c + ":" + s);}}
         }
+
+
+
+
+    }
 
     }
